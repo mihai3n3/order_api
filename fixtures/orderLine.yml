@@ -1,0 +1,5 @@
+App\Entity\OrderLine:
+  orderLine_{1..300}:
+    order: '@order_*'
+    product: '@product_*'
+    price: <randomFloat()>

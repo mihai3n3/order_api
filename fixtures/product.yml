@@ -1,0 +1,6 @@
+App\Entity\Product:
+  product_{1..100}:
+      name: <name()>
+      price: <randomFloat()>
+      createdAt: <dateTime()>
+      updatedAt: <dateTime()>

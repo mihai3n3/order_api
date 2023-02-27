@@ -1,0 +1,5 @@
+App\Entity\Order:
+  order_{1..100}:
+    totalPrice: <randomFloat()>
+    createdAt: <dateTime()>
+    updatedAt: <dateTime()>
