@@ -1,6 +1,6 @@
 App\Entity\Product:
   product_{1..100}:
-      name: <name()>
-      price: <randomFloat()>
-      createdAt: <dateTime()>
-      updatedAt: <dateTime()>
+    name: <word()> <randomNumber(5,true)>
+    price: <randomFloat(2)>
+    createdAt: <dateTime()>
+    updatedAt: <dateTime()>

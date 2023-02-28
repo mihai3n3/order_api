@@ -1,5 +1,5 @@
 App\Entity\Order:
   order_{1..100}:
-    totalPrice: <randomFloat()>
+    totalPrice: <randomFloat(2)>
     createdAt: <dateTime()>
     updatedAt: <dateTime()>

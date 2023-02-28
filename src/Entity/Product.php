@@ -23,10 +23,9 @@ class Product
     #[Assert\NotBlank]
     private string $name;
 
-    #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2)]
+    #[ORM\Column(type: Types::FLOAT, precision: 10, scale: 2)]
     #[Assert\NotBlank]
     private float $price;
-
 
     public function getName(): ?string
     {

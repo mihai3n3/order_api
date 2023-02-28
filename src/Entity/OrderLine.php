@@ -8,6 +8,7 @@ use App\Entity\TraitUtil\EntityIdTrait;
 use App\Repository\OrderLineRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\DBAL\Types\Types;
 
 #[ORM\Entity(repositoryClass: OrderLineRepository::class)]
 #[ORM\Table(name: '`orderLine`')]
@@ -21,14 +22,14 @@ use Symfony\Component\Validator\Constraints as Assert;
 //)]
 class OrderLine
 {
-    Use EntityIdTrait;
+    use EntityIdTrait;
 
     #[ORM\ManyToOne(targetEntity: Product::class)]
     #[ORM\JoinColumn(nullable: false)]
     #[Assert\NotNull]
     private Product $product;
 
-    #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
+    #[ORM\Column(type: Types::FLOAT, precision: 10, scale: 2)]
     #[Assert\NotBlank]
     private float $price;
 

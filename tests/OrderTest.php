@@ -18,15 +18,15 @@ class OrderTest extends ApiTestCase
         $this->assertMatchesResourceCollectionJsonSchema(Order::class);
     }
 
-    public function testCreateOrder(): void
-    {
-
-    }
-
-    public function testCreateInvalidOrder(): void
-    {
-
-    }
+//    public function testCreateOrder(): void
+//    {
+//
+//    }
+//
+//    public function testCreateInvalidOrder(): void
+//    {
+//
+//    }
 
     public function testDeleteOrder(): void
     {
@@ -40,15 +40,15 @@ class OrderTest extends ApiTestCase
             static::getContainer()->get('doctrine')->getRepository(Order::class)->find('100')
         );
     }
-
-    public function testAddProductToOrder(): void
-    {
-
-    }
-
-    public function testRemoveProductToOrder(): void
-    {
-
-    }
+//
+//    public function testAddProductToOrder(): void
+//    {
+//
+//    }
+//
+//    public function testRemoveProductToOrder(): void
+//    {
+//
+//    }
 
 }
