@@ -41,6 +41,12 @@ class OrderLineRepository extends ServiceEntityRepository implements OrderLineIn
 
     public function getProductsOrder(int $orderId): array
     {
-
+        return $this->createQueryBuilder('ol')
+            ->andWhere('ol.order = :orderId')
+            ->setParameter('orderId', $orderId)
+            ->orderBy('ol.id', 'ASC')
+            ->getQuery()
+            ->getResult()
+        ;
     }
 }

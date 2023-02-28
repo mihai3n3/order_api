@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace App\Entity;
 
 use ApiPlatform\Metadata\ApiResource;
-use ApiPlatform\Metadata\Link;
 use App\Entity\TraitUtil\EntityIdTrait;
 use App\Entity\TraitUtil\TimestampTrait;
 use App\Repository\ProductRepository;

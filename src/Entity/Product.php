@@ -3,12 +3,13 @@ declare(strict_types=1);
 
 namespace App\Entity;
 
+use ApiPlatform\Metadata\ApiResource;
 use App\Entity\TraitUtil\EntityIdTrait;
 use App\Entity\TraitUtil\TimestampTrait;
-use ApiPlatform\Metadata\ApiResource;
 use App\Repository\ProductRepository;
-use Symfony\Component\Validator\Constraints as Assert;
+use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 #[ORM\Entity(repositoryClass: ProductRepository::class)]
 #[ORM\Table(name: '`product`')]
@@ -18,11 +19,11 @@ class Product
     use EntityIdTrait;
     use TimestampTrait;
 
-    #[ORM\Column(type: 'string')]
+    #[ORM\Column(type: Types::STRING, length: 255)]
     #[Assert\NotBlank]
     private string $name;
 
-    #[ORM\Column(type: 'decimal', precision: 10, scale: 2)]
+    #[ORM\Column(type: Types::DECIMAL, precision: 10, scale: 2)]
     #[Assert\NotBlank]
     private float $price;
 

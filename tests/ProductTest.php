@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace App\Tests;
 
 use ApiPlatform\Symfony\Bundle\Test\ApiTestCase;
-use Hautelook\AliceBundle\PhpUnit\RefreshDatabaseTrait;
 use App\Entity\Product;
+use Hautelook\AliceBundle\PhpUnit\RefreshDatabaseTrait;
 
 class ProductTest extends ApiTestCase
 {

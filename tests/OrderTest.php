@@ -4,8 +4,8 @@ declare(strict_types=1);
 namespace App\Tests;
 
 use ApiPlatform\Symfony\Bundle\Test\ApiTestCase;
-use Hautelook\AliceBundle\PhpUnit\RefreshDatabaseTrait;
 use App\Entity\Order;
+use Hautelook\AliceBundle\PhpUnit\RefreshDatabaseTrait;
 
 class OrderTest extends ApiTestCase
 {
@@ -50,4 +50,5 @@ class OrderTest extends ApiTestCase
     {
 
     }
+
 }
